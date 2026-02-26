@@ -314,6 +314,69 @@ a {
     color: var(--text-primary);
 }
 
+/* Skill Slider Elements (Hidden on Desktop) */
+.skills-slider-container {
+    position: relative;
+    width: 100%;
+}
+
+.skills-grid-wrapper {
+    width: 100%;
+}
+
+.slider-btn {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    transition: var(--transition-fast);
+}
+
+.slider-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.prev-btn {
+    left: -10px;
+}
+
+.next-btn {
+    right: -10px;
+}
+
+.slider-dots {
+    display: none;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.dot-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.dot-indicator.active {
+    background: var(--accent-color);
+    width: 20px;
+    border-radius: 4px;
+}
+
 /* About Section */
 .about-text {
     flex: 1;
@@ -532,6 +595,52 @@ a {
     .nav-links {
         display: none;
         /* simple mobile nav approach */
+    }
+
+    /* Skills Slider */
+    .skills-slider-container {
+        display: flex;
+        align-items: center;
+        margin-top: 3rem;
+        padding: 0 10px;
+    }
+
+    .skills-grid-wrapper {
+        overflow: hidden;
+        touch-action: pan-y;
+        padding: 20px 0;
+        margin: -20px 0;
+    }
+
+    .skills-grid {
+        display: flex;
+        grid-template-columns: none;
+        margin-top: 0;
+        gap: 1rem;
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: transform;
+    }
+
+    .skill-card {
+        flex: 0 0 auto;
+        width: calc(50% - 0.5rem);
+        min-width: 140px;
+    }
+
+    .slider-btn {
+        display: flex;
+    }
+
+    .prev-btn {
+        left: -5px;
+    }
+
+    .next-btn {
+        right: -5px;
+    }
+
+    .slider-dots {
+        display: flex;
     }
 
     .footer-container {

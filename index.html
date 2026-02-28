@@ -20,10 +20,21 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="logo">Priyansh<span class="dot">.</span></a>
-            <ul class="nav-links">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="https://docs.google.com/document/d/1GVarIyY5EvgtrccIONgJThSSxxuOTQW5/edit?usp=drive_link&ouid=115772730775550811684&rtpof=true&sd=true"
+                        target="_blank" class="nav-resume-btn">
+                        Resume
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -49,6 +60,83 @@
         <!-- Subtle background glowing orb -->
         <div class="glow-orb"></div>
     </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="section about-me-section">
+        <div class="section-container">
+            <div class="section-header js-scroll fade-in-up">
+                <h2 class="section-title glowing-underline">About Me</h2>
+            </div>
+
+            <div class="about-me-card js-scroll fade-in-up">
+                <div class="about-me-layout">
+
+                    <!-- Left Column: Photo -->
+                    <div class="about-me-photo-container">
+                        <div class="profile-photo-wrapper">
+                            <div class="profile-photo-placeholder">
+                                <span>Add Your<br>Photo Here</span>
+                            </div>
+                            <div class="photo-glow-ring"></div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Content -->
+                    <div class="about-me-content">
+                        <h3 class="about-me-name js-scroll fade-in-left">Priyansh Jain</h3>
+                        <div class="about-me-location">
+                            <svg class="location-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Jaipur, Rajasthan</span>
+                        </div>
+
+                        <ul class="about-me-intro-list">
+                            <li class="js-scroll fade-in-up" data-delay="100">Passionate Computer Science student</li>
+                            <li class="js-scroll fade-in-up" data-delay="200">Focused on Web Development & DSA</li>
+                            <li class="js-scroll fade-in-up" data-delay="300">Building responsive apps using React</li>
+                            <li class="js-scroll fade-in-up" data-delay="400">Actively seeking Frontend Internship</li>
+                        </ul>
+
+                        <div class="internship-badge js-scroll fade-in-up" data-delay="500">
+                            <span class="status-dot"></span>
+                            🚀 Actively seeking Frontend / Web Development Internship — Remote / Onsite
+                        </div>
+
+                        <div class="about-me-current">
+                            <span class="current-label">Currently:</span>
+                            <span class="current-text">2nd Year B.Tech CSE student at JECRC University</span>
+                        </div>
+
+                        <div class="interests-container">
+                            <h4 class="interests-title">Interests & Passions</h4>
+                            <div class="interests-grid">
+                                <div class="interest-card js-scroll fade-in-up" data-delay="0">
+                                    <span class="interest-icon">🌐</span>
+                                    <span class="interest-label">Web Development</span>
+                                </div>
+                                <div class="interest-card js-scroll fade-in-up" data-delay="100">
+                                    <span class="interest-icon">🎨</span>
+                                    <span class="interest-label">UI/UX Design</span>
+                                </div>
+                                <div class="interest-card js-scroll fade-in-up" data-delay="200">
+                                    <span class="interest-icon">💻</span>
+                                    <span class="interest-label">Open Source</span>
+                                </div>
+                                <div class="interest-card js-scroll fade-in-up" data-delay="300">
+                                    <span class="interest-icon">🚀</span>
+                                    <span class="interest-label">Learning New Tech</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Projects Section -->
     <section id="projects" class="section projects-section">
@@ -139,44 +227,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about-section">
-        <div class="section-container flex-container">
-            <div class="about-text js-scroll fade-in-left">
-                <h2 class="section-title">Design. Code. Ship.</h2>
-                <p class="text-body mt-4">
-                    I believe that the best products live at the intersection of stunning visual design and robust
-                    engineering.
-                    Every pixel matters, and every line of code should be intentional.
-                </p>
-                <div class="stats mt-6">
-                    <div class="stat-item">
-                        <span class="stat-number">2+</span>
-                        <span class="stat-label">YEARS EXPERIENCE</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">PROJECTS SHIPPED</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="about-visual js-scroll fade-in-right">
-                <!-- Apple-esque glass card for visual representation -->
-                <div class="glass-card">
-                    <div class="code-snippet">
-                        <code>
-                            <span class="keyword">const</span> <span class="variable">developer</span> = {<br>
-                            &nbsp;&nbsp;<span class="property">passion</span>: <span class="string">"UI/UX"</span>,<br>
-                            &nbsp;&nbsp;<span class="property">stack</span>: [<span class="string">"React"</span>, <span class="string">"Node"</span>, <span class="string">"TypeScript"</span>],<br>
-                            &nbsp;&nbsp;<span class="method">build</span>: () => <span class="string">"Masterpiece"</span><br>
-                            };
-                        </code>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section contact-section js-scroll fade-in-up">
